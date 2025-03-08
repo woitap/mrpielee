@@ -13,123 +13,227 @@
     <style>
         @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
 
-        body {
-            font-size: 16px;
-            color: #404040;
-            font-family: Montserrat, sans-serif;
-            background-color: #f1f1f1;
-            display: grid;
-            place-items: center;
-            margin: 0;
-            padding: 2rem 0;
-            box-sizing: border-box;
-        }
-
-        .card {
-            background-color: #fff;
-            max-width: 400px;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            border-radius: 2rem;
-            box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.5);
-            margin: 10% auto;
-            width: 90%;
-        }
-
-        .card .banner {
-            background-image: url("./bc.jpg");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 11rem;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            box-sizing: border-box;
-        }
-
-        .card .banner img {
-            background-color: #fff;
-            width: 8.4rem;
-            height: 8.4rem;
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-            border-radius: 50%;
-            transform: translateY(50%);
-            transition: transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
-            object-fit: cover;
-        }
-
-        .card .banner img:hover {
-            transform: translateY(50%) scale(1.1);
-        }
-
-        .card h2.name {
-            text-align: center;
-            padding: 0 2rem 0.5rem;
-            margin: 0;
-        }
-
-        .card .title {
-            color: #a0a0a0;
-            font-size: 0.85rem;
-            text-align: center;
-            padding: 0 2rem 1.2rem;
-        }
-
-        .card .actions {
-            padding: 0 2rem 1.2rem;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card .actions .follow-btn button {
-            color: white;
-            font: inherit;
-            font-weight: bold;
-            background-color: #08060B;
-            width: 100%;
-            border: none;
-            padding: 1rem;
-            border-radius: 1.5rem/50%;
-            transition: background-color 100ms ease-in-out, transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
-            cursor: pointer;
-        }
-
-        .card .actions .follow-btn button:hover {
-            background-color: #050407;
-            transform: scale(1.05);
-        }
-
-        .card .desc {
-            padding: 0 2rem 2rem;
-            text-align: center;
-            font-size: 14px;
-        }
-
-        .card .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 1rem;
-        }
-
-        .card .social-icons .icon a {
-            color: #000;
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
-            line-height: 50px;
-            text-align: center;
-            border-radius: 50%;
-            background: #fff;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .card .social-icons .icon a:hover {
-            transform: scale(1.1);
-        }
+      body {
+  font-size: 16px;
+  color: #404040;
+  font-family: Montserrat, sans-serif;
+  background-color: #f1f1f1;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 2rem 0;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+}
+.card {
+  background-color: #fff;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 2rem;
+  box-shadow: 0px 1rem 1.5rem rgba(0,0,0,0.5);
+  margin-top: 10%;
+  margin-bottom: 20%;
+  margin-left: 5%;
+  margin-right: 5%;
+	width: 81%;
+}
+.card .banner {
+  background-image: url("./bc.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 11rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.card .banner img {
+  background-color: #fff;
+  width: 8.4rem;
+  height: 8.4rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+  border-radius: 50%;
+  transform: translateY(50%);
+  transition: transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  object-fit: cover;
+}
+.card .banner img:hover {
+  transform: translateY(50%) scale(1.3);
+}
+.card .menu {
+  width: 100%;
+  height: 5.5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: relative;
+  box-sizing: border-box;
+}
+.card .menu .opener {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+  border-radius: 50%;
+  transition: background-color 100ms ease-in-out;
+}
+.card .menu .opener:hover {
+  background-color: #f2f2f2;
+}
+.card .menu .opener span {
+  background-color: #404040;
+  width: 0.4rem;
+  height: 0.4rem;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 0.2rem);
+  border-radius: 50%;
+}
+.card .menu .opener span:nth-child(1) {
+  top: 0.45rem;
+}
+.card .menu .opener span:nth-child(2) {
+  top: 1.05rem;
+}
+.card .menu .opener span:nth-child(3) {
+  top: 1.65rem;
+}
+.card h2.name {
+  text-align: center;
+  padding: 0 2rem 0.5rem;
+  margin: 0;
+}
+.card .title {
+  color: #a0a0a0;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 0 2rem 1.2rem;
+}
+.card .actions {
+  padding: 0 2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  order: 99;
+}
+.card .actions .follow-info {
+  padding: 0 0 1rem;
+  display: flex;
+}
+.card .actions .follow-info h2 {
+  text-align: center;
+  width: 50%;
+  margin: 0;
+  box-sizing: border-box;
+}
+.card .actions .follow-info h2 a {
+  text-decoration: none;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.8rem;
+  transition: background-color 100ms ease-in-out;
+}
+.card .actions .follow-info h2 a span {
+  color: #1c9eff;
+  font-weight: bold;
+ 
+  transform: scaleY(1.3);
+  transition: color 100ms ease-in-out;
+}
+.card .actions .follow-info h2 a small {
+  color: #afafaf;
+  font-size: 0.85rem;
+  font-weight: normal;
+}
+.card .actions .follow-info h2 a:hover {
+  background-color: #f2f2f2;
+}
+.card .actions .follow-info h2 a:hover span {
+  color: #007ad6;
+}
+.card .actions .follow-btn button {
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  background-color: #08060B;
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 1.5rem/50%;
+  transition: background-color 100ms ease-in-out, transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.card .actions .follow-btn button:hover {
+  background-color: #08060B;
+  transform: scale(1.1);
+}
+.card .actions .follow-btn button:active {
+  background-color: #08060B;
+  transform: scale(1);
+}
+.card .desc {
+  padding: 0 2rem 2.5rem;
+  order: 100;
+  text-align: center;
+  font-size: 14px;
+}
+.concept {
+  color: #959595;
+  font-size: 0.9em;
+  font-weight: 400;
+  text-align: center;
+  
+}
+.concept a {
+  color: #08060B;
+  text-decoration: none;
+}
+  
+  
+.card .social-icons {
+  display: flex;
+  margin-top: 0em;
+  justify-content: center;
+  margin: 5px;
+  
+}
+.card .social-icons .icon {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.card .social-icons .icon a {
+  color: #000;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 30px;
+  margin-left: 7px;
+  margin-right: 7px;
+  box-shadow: 0 13px 26px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+.card .social-icons .icon:nth-of-type(2) a {
+  background: #fff;
+}
+.card .social-icons .icon:nth-of-type(3) a {
+  background: #fff;
+}
+.card .social-icons .icon:nth-of-type(1) a {
+  background: #fff ;
+  font-size: 24px;
+  -moz-transform: scale(1, 1);
+-webkit-transform: scale(1, 1);
+-o-transform: scale(1, 1);
+-ms-transform: scale(1, 1);
+transform: scale(1, 1);
+}
 
     </style>
 </head>
